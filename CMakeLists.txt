@@ -61,7 +61,11 @@ include_directories(
 
 add_definitions(-DUSE_STDPERIPH_DRIVER -DSTM32F10X_LD)
 
-file(GLOB_RECURSE SOURCES "Libraries/*.*" "Config/*.*" "User/*.*")
+file(GLOB_RECURSE SOURCES "Libraries/*.c" "Config/*.c" "User/*.c"
+        "Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/arm/startup_stm32f103c8tx.s"
+#        "Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/arm/startup_stm32f10x_md.s"
+)
+
 
 add_link_options(-specs=nano.specs -specs=nosys.specs -u _printf_float)
 
