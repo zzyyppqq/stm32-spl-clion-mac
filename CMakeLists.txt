@@ -62,8 +62,9 @@ include_directories(
 add_definitions(-DUSE_STDPERIPH_DRIVER -DSTM32F10X_LD)
 
 file(GLOB_RECURSE SOURCES "Libraries/*.c" "Config/*.c" "User/*.c"
-        "Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/arm/startup_stm32f103c8tx.s"
-#        "Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/arm/startup_stm32f10x_md.s"
+        #        "startup_stm32f103c8tx.s"
+        #        "Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/gcc_ride7/startup_stm32f10x_md.s"
+        "Libraries/CMSIS/CM3/DeviceSupport/ST/STM32F10x/startup/TrueSTUDIO/startup_stm32f10x_md.s"
 )
 
 
